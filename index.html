@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -8,17 +8,19 @@
     <!-- Daisy UI & Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header class="container mx-auto">
-        <nav class="w-11/12 mx-auto flex justify-between py-4 border-b">
+    <header class="container mx-auto sticky top-0 z-50">
+        <nav class="w-11/12 mx-auto flex justify-between py-4 border-b bg-white">
             <div>
                 <img src="./assests/Logo.png" alt="PH-Tube...">
             </div>
             <div>
                 <label class="input input-bordered flex items-center gap-2">
-                    <input type="text" class="grow" placeholder="Search" />
+                    <input id="search-input" type="text" class="grow" placeholder="Search"/>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
                         class="h-4 w-4 opacity-70">
                         <path fill-rule="evenodd"
@@ -31,7 +33,7 @@
                 <button class="btn">Sort</button>
             </div>
         </nav>
-        <nav id="categories" class="w-11/12 mx-auto flex justify-center gap-5 py-5">
+        <nav class="bg-white bg-opacity-50 backdrop-blur-md flex justify-center gap-5 py-5" id="categories" class="w-11/12 mx-auto flex justify-center gap-5 py-5">
 
         </nav>
     </header>
@@ -40,9 +42,27 @@
     <main>
         <!-- Show All Videos Display -->
         <section class="container mx-auto my-5">
-            <div  id="display-videos" class="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div id="display-videos" class="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
 
             </div>
+        </section>
+
+        <!-- Show Model with Card Details -->
+        <section>
+            <button class="btn hidden" onclick="customModal.showModal()">open modal</button>
+            <dialog id="customModal" class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box">
+                    <div id="modal-content">
+
+                    </div>
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
         </section>
     </main>
 
