@@ -14,26 +14,28 @@
 
 <body>
     <header class="container mx-auto sticky top-0 z-50">
-        <nav class="w-11/12 mx-auto flex justify-between py-4 border-b bg-white">
-            <div>
-                <img src="./assests/Logo.png" alt="PH-Tube...">
-            </div>
-            <div>
-                <label class="input input-bordered flex items-center gap-2">
-                    <input id="search-input" type="text" class="grow" placeholder="Search"/>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
-                        class="h-4 w-4 opacity-70">
-                        <path fill-rule="evenodd"
-                            d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-                            clip-rule="evenodd" />
-                    </svg>
-                </label>
-            </div>
-            <div>
-                <button class="btn">Sort</button>
-            </div>
-        </nav>
-        <nav class="bg-white bg-opacity-50 backdrop-blur-md flex justify-center gap-5 py-5" id="categories" class="w-11/12 mx-auto flex justify-center gap-5 py-5">
+        <div class="bg-white ">
+            <nav class="w-11/12 mx-auto flex justify-between items-center py-4 border-b gap-2">
+                <div>
+                    <img src="./assests/Logo.png" alt="PH-Tube...">
+                </div>
+                <div>
+                    <label class="input input-bordered flex items-center gap-2">
+                        <input id="search-input" type="text" class="w-full" placeholder="Search"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                            class="h-4 w-4 opacity-70">
+                            <path fill-rule="evenodd"
+                                d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </label>
+                </div>
+                <div>
+                    <button class="btn">Sort</button>
+                </div>
+            </nav>
+        </div>
+        <nav class="bg-transparent bg-opacity-50 backdrop-blur-md flex justify-center gap-5 py-5" id="categories" class="w-11/12 mx-auto flex justify-center gap-5 py-5">
 
         </nav>
     </header>

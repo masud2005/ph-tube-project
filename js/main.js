@@ -124,7 +124,7 @@ const displayVideos = (videos) => {
     videos.forEach(video => {
         // console.log(video);
         const card = document.createElement('div');
-        card.classList = 'card shadow p-2';
+        card.classList = 'card shadow';
         card.innerHTML = `
             <figure class="relative">
                 <img class="w-full h-[250px] lg:h-[200px] object-cover"
@@ -134,7 +134,7 @@ const displayVideos = (videos) => {
                 : `<span class="absolute bottom-2 right-2 bg-gray-700 rounded text-white px-2 py-1 text-xs">${getTimeString(video.others.posted_date)}</span>`
             }
             </figure>
-            <div class="flex gap-5 py-5">
+            <div class="flex gap-5 py-5 px-2">
                 <div class="">
                     <img class="w-10 h-10 rounded-full" src=${video.authors[0].profile_picture} />
                 </div>
@@ -147,7 +147,7 @@ const displayVideos = (videos) => {
                     <p class="text-gray-500 text-sm">${video.others.views}</p>
                 </div>
             </div>
-            <div class='flex justify-center'>
+            <div class='flex justify-center pb-3'>
                 <button onclick="showDetails('${video.video_id}')" class='bg-pink-500 hover:bg-pink-300 hover:text-black transition duration-200 py-1 px-3 rounded text-white'>Details</button>
             </div>
         `;
