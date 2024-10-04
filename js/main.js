@@ -113,7 +113,7 @@ const displayVideos = (videos) => {
         displayContainers.classList.remove('grid')
         displayContainers.innerHTML = `
             <div class=" mt-10">
-                <img class="w-[100px] mx-auto" src="../assests/icon.png"/>
+                <img class="w-[100px] mx-auto" src="/assests/icon.png"/>
                 <h1 class='text-center font-bold text-2xl mt-10'>Oops!! Sorry, There is no content here</h1>
             </div>
         `;
